@@ -6,6 +6,38 @@
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-black: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Arial;
   display: inline-block;
@@ -20,7 +52,7 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #003366;
-  color: #FFD43B;
+  color: #ffd43b;
   font-size: 1rem;
 }
 .network-time {
@@ -34,40 +66,45 @@ body {
 }
 .card {
   background-color: white;
-  box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+  box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, 0.5);
 }
 .card-title {
-  color:#003366;
+  color: #003366;
   font-weight: bold;
 }
 .cards {
   max-width: 800px;
   margin: 0 auto;
-  display: grid; grid-gap: 2rem;
+  display: grid;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .reading {
   font-size: 1.2rem;
 }
-.cube-content{
+.cube-content {
   width: 100%;
   background-color: white;
-  height: 300px; margin: auto;
-  padding-top:2%;
+  height: 300px;
+  margin: auto;
+  padding-top: 2%;
 }
-#reset{
+#reset {
   border: none;
-  color: #FEFCFB;
+  color: #fefcfb;
   background-color: #003366;
   padding: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 14px; width: 150px;
+  font-size: 14px;
+  width: 150px;
   border-radius: 4px;
 }
-#resetX, #resetY, #resetZ{
+#resetX,
+#resetY,
+#resetZ {
   border: none;
-  color: #FEFCFB;
+  color: #fefcfb;
   background-color: #003366;
   padding-top: 10px;
   padding-bottom: 10px;
