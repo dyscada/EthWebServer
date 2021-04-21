@@ -61,7 +61,7 @@
       <h2 class="home__description">Engineer Electronics and architecture</h2>
       <button class="home__contact">Contact Us</button>
     </section>
-    <section id="about" class="section">
+    <section id="about" class="section section__container">
       <h1>About Us</h1>
       <p>
         We met at university, married, and have been together for over 40
@@ -102,12 +102,12 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="section"></section>
+    <!-- <section id="skills" class="section"></section> -->
     <section id="work">
       <h1>Our work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
-        <button class="category__btn">
+        <button class="category__btn active">
           Chol's work<span class="category__count">3</span>
         </button>
         <button class="category__btn">
@@ -116,24 +116,44 @@
       </div>
       <div class="work__projects">
         <a
-          href="https://www.youtube.com/watch?v=nlFM1q9QPJw"
-          class="projects"
+          href="https://www.youtube.com/watch?v=LoFUnfA8Jec"
+          class="project"
           target="blank"
         >
-          <img src="imgs/scada.png" alt="SCADA" />
+          <img src="imgs/mcrc.png" alt="MCRC" class="project__img" />
           <div class="project__description">
-            <h3>City gas remote control/monitoring system</h3>
+            <h3>
+              Air Force Commander<br />
+              MCRC/ARTCC
+            </h3>
+            <span>Aviotronics</span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=Rr8OqB0xRlY"
+          class="project"
+          target="blank"
+        >
+          <img src="imgs/scada.png" alt="SCADA" class="project__img" />
+          <div class="project__description">
+            <h3>
+              City Gas<br />
+              Remote control/monitoring
+            </h3>
             <span>YesCo City gas</span>
           </div>
         </a>
         <a
           href="https://www.youtube.com/watch?v=b4q3i5aw6XQ&list=RDCMUCfhCa62y-nE-5fy5X4kDK9Q&start_radio=1&t=415"
-          class="projects"
+          class="project"
           target="blank"
         >
-          <img src="imgs/eis.png" alt="SCADA" />
+          <img src="imgs/eis.png" alt="EIS" class="project__img" />
           <div class="project__description">
-            <h3>Rail road control system</h3>
+            <h3>
+              Rail road<br />
+              control/monitoring
+            </h3>
             <span>Hyukshin</span>
           </div>
         </a>
