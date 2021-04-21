@@ -6,9 +6,9 @@
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-"use strict";
+//"use strict";
 //Make navbar transparent when it is on the top
-const navbar = document.querySelector("#navbar");
+/*const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
@@ -30,7 +30,7 @@ navbarMenu.addEventListener("click", (event) => {
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavier: "smooth", block: "end" });
 });
-
+*/
 let scene, camera, rendered, cube;
 
 function parentWidth(elem) {
