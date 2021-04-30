@@ -36,13 +36,6 @@
   --animation-duration: 300ms;
 }
 
-button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -90,6 +83,17 @@ a {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Navbar */
@@ -152,7 +156,10 @@ ul {
 }
 
 .home__avartar {
-  border-radius: var(--size-border-radius);
+  width: 400px;
+  height: 250px;
+  border-radius: 20%;
+  /* border-radius: var(--size-border-radius); */
   border: 2px solid var(--color-light-white);
 }
 
