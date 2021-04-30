@@ -25,7 +25,8 @@
     />
     <link rel="icon" href="data:," />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -38,7 +39,7 @@
     <nav id="navbar">
       <div class="navbar__logo">
         <i class="fas fa-plane-departure"></i>
-        <a href="#">CholnRyueae</a>
+        <a href="#">Chol_Ryueae</a>
       </div>
       <div class="navbar__menu">
         <ul class="navbar__menu">
@@ -83,9 +84,15 @@
           <!-- </div> -->
           <h3 class="major__title">The person who built Daeyang Building</h3>
           <div class="major__description">
-            She graduated from the Department of Architecture <br />at Hanyang
-            University, worked at a renowned design office, <br />and built and
-            managed the Daeyang Building .
+           1972: Graduated from the Department of Architecture<br/>
+           &emsp;&emsp;&emsp; at Hanyang University. <br/>
+           &emsp;&emsp;&emsp;and Studied at Kim Joong-up Design Office.<br/>
+           1978: Participated in the competition for the Gwacheon government</br>
+           &emsp;&emsp;&emsp; building status (2nd Prize, Jungil Architecture)<br/>
+           1995: Built first DaeYang Building(5-245, Hyochang-dong)<br/>
+           2002: Build a temporary building in 5-129, Hyochang-dong<br/>
+           2004: Finally Built and has managed current DaeYang Building.
+          
           </div>
         </div>
         <div class="major">
@@ -96,11 +103,12 @@
             President of Daeyang Electronics Industry
           </h3>
           <div class="major__description">
-            After graduating from the Department of Communications<br />
-            at Hanyang University and retiring as an officer of the Korean<br />
-            Air Force, participated in the air force air defense project<br />
-            and civil aviation control system project, and then<br />
-            established Daeyang Electronics .
+            1972: After graduating from the Department of Communications<br/>
+            &emsp;&emsp;&emsp;at Hanyang University<br/>
+            1981: Retiring as an officer of the Korean Air Force<br/>
+            1982: Participated in the air force air defense project<br/>
+            1986: Civil aviation control system project<br/>
+            1988: Established Daeyang Electronics
           </div>
         </div>
       </div>
@@ -119,7 +127,21 @@
           </button>
         </div>
         <div class="work__projects">
-          <a
+          <!-- <a
+            href="https://www.youtube.com/watch?v=b4q3i5aw6XQ&list=RDCMUCfhCa62y-nE-5fy5X4kDK9Q&start_radio=1&t=415"
+            class="project"
+            target="blank"
+          > -->
+          <img src="imgs/DY_Bdg.png" alt="Daeyang" class="project__img" />
+          <div class="project__description">
+            <h3>
+              DaeYang BDG<br />
+              2004 Completed
+            </h3>
+            <span>Daeyang Electronics</span>
+          </div>
+        <!-- </a> -->
+        <a
             href="https://www.youtube.com/watch?v=LoFUnfA8Jec"
             class="project"
             target="blank"
@@ -148,7 +170,7 @@
             </div>
           </a>
           <a
-            href="https://www.youtube.com/watch?v=b4q3i5aw6XQ&list=RDCMUCfhCa62y-nE-5fy5X4kDK9Q&start_radio=1&t=415"
+            href="https://www.youtube.com/watch?v=UPWC1K8xEV4"
             class="project"
             target="blank"
           >
@@ -161,6 +183,7 @@
               <span>Hyukshin</span>
             </div>
           </a>
+          
         </div>
       </div>
     </section>
@@ -176,74 +199,7 @@
         <i class="fa fa-linkedin-square"></i>
       </div>
       <p class="contact__rights">2021 Chol and Ryueae - All rights reserved</p>
-    </section>
-    <!-- <section id="skills" class="section"> -->
-    <div class="topnav">
-      <>
-      <i class="fas fa-plane-departure"></i> ESP32WebServer
-      <i class="fas fa-plane-arrival"></i>
-    </div>
-    <div class="network-time">
-      <h1>
-        <i class="fas fa-plane-departure"></i>
-        <p>
-          <span class="reading">NTP: <span id="yymmdd"></span> 년월일</span>
-        </p>
-        <i class="fas fa-plane-arrival"></i>
-      </h1>
-    </div>
-    <div class="content">
-      <div class="cards">
-        <div class="card">
-          <p class="card-title">GYROSCOPE</p>
-          <p>
-            <span class="reading">X: <span id="gyroX"></span> rad</span>
-          </p>
-          <p>
-            <span class="reading">Y: <span id="gyroY"></span> rad</span>
-          </p>
-          <p>
-            <span class="reading">Z: <span id="gyroZ"></span> rad</span>
-          </p>
-        </div>
-        <div class="card">
-          <p class="card-title">ACCELEROMETER</p>
-          <p>
-            <span class="reading"
-              >X: <span id="accX"></span> ms<sup>2</sup></span
-            >
-          </p>
-          <p>
-            <span class="reading"
-              >Y: <span id="accY"></span> ms<sup>2</sup></span
-            >
-          </p>
-          <p>
-            <span class="reading"
-              >Z: <span id="accZ"></span> ms<sup>2</sup></span
-            >
-          </p>
-        </div>
-        <div class="card">
-          <p class="card-title">TEMPERATURE</p>
-          <p>
-            <span class="reading"><span id="temp"></span> &deg;C</span>
-          </p>
-          <p class="card-title">3D ANIMATION</p>
-          <button id="reset" onclick="resetPosition(this)">
-            RESET POSITION
-          </button>
-          <button id="resetX" onclick="resetPosition(this)">X</button>
-          <button id="resetY" onclick="resetPosition(this)">Y</button>
-          <button id="resetZ" onclick="resetPosition(this)">Z</button>
-        </div>
-      </div>
 
-      <div class="cube-content">
-        <div id="3Dcube"></div>
-      </div>
-    </div>
-    <!-- </section> -->
     <!-- <script src="script.js"></script> -->
   </body>
 </html>

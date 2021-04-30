@@ -208,9 +208,12 @@ ul {
   cursor: pointer;
 }
 
-.major__title,
+.major__title {
+  color: var(--color-grey);
+}
 .major__description {
   color: var(--color-grey);
+  text-align: left;
 }
 
 /* Work */
