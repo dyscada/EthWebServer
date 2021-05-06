@@ -241,6 +241,28 @@ button {
   color: var(--color-white);
 }
 
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  color: var(--color-dark-black);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  line-height: 24px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
 .work__projects {
   /* display: inline-flex;
   align-items: center; */
@@ -292,7 +314,7 @@ button {
 }
 
 .project:hover .project__description {
-  opacity: 0.8;
+  opacity: 0.6;
   transform: translateY(0px);
 }
 
