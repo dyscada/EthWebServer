@@ -273,7 +273,7 @@ button {
   transition: all var(--animation-duration) ease-out;
 }
 
-.work_projects.anim-out {
+.work__projects.anim-out {
   opacity: 0;
   transform: scale(0.96) translateY(40px);
 }
