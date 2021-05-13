@@ -7,26 +7,12 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>ESPWebServer</title>
-    <meta charset="UTF-8" />
+    <title>ESP 6050 Server</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="ESP32_Ethernet_WebServer" />
-    <meta name="author" content="Cholq" />
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/101cb91783.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" href="data:," />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="main.js" defer></script>
-    <!-- <script src="script.js" defer></script> -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -36,213 +22,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <!-- <i class="fas fa-plane-departure"></i> -->
-        <img
-          src="imgs/favicon.png"
-          alt=""
-          class="favicon"
-        />
-        <a href="#">Chol_Ryueae</a>
-      </div>
-      <!-- <div class="navbar__menu"> -->
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item active" data-link="#home">Home</li>
-          <li class="navbar__menu__item" data-link="#about">About</li>
-          <li class="navbar__menu__item" data-link="#work">Work</li>
-          <!-- <li class="navbar__menu__item" data-link="#skills">Skill</li> -->
-          <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        </ul>
-      <!-- </div> -->
-      <!-- Toogle button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-
-    <!-- Home -->
-    <section id="home">
-      <div class="home__container">
-        <img
-          src="imgs/Chol&Ryueae.png"
-          alt="Chol and Ryueae's profile photo"
-          class="home__avartar"
-        />
-        <h1 class="home__title">Hello, <br />We are GrandFa and GrandMa</h1>
-        <h2 class="home__description">Engineer Electronics and architecture</h2>
-        <button class="home__contact">Contact Me</button>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <h1>About Us</h1>
-      <p>
-        We met at university, married, and have been together for over 40
-        years.<br />
-        We have a son and a daughter and now(2021.4) have three grandchildren<br />
-        and a grandchild who will be born eight months later. <br />
-        My husband and I are proud to have been operating Daeyang Electronics
-        company <br />for over 30 years and building Daeyang Building to save
-        our two majors. <br />Now, we are an old couple dedicated to the
-        education of our grandchildren.
-      </p>
-      <div class="about__majors">
-        <div class="major">
-          <!-- <div class="major__icon"> -->
-          <img src="imgs/Ryueae.png" alt="" class="major__icon"
-          <!-- </div> -->
-          <h3 class="major__title">The person who built Daeyang Building</h3>
-          <div class="major__description">
-           1977: Graduated from the Department of Architecture<br/>
-           &emsp;&emsp;&emsp; at Hanyang University. <br/>
-           &emsp;&emsp;&emsp;and Studied at Kim Joong-up Architectural Studio.<br/>
-           1978: Participated in the architectural competition for the Gwacheon government</br>
-           &emsp;&emsp;&emsp; building status (2nd Prize, Jungil Architecture)<br/>
-           1995: Built first DaeYang Building(5-245, Hyochang-dong)<br/>
-           2002: Build a temporary building in 5-129, Hyochang-dong<br/>
-           2004: Finally Built and has managed current DaeYang Building.
-          
-          </div>
+    <div class="topnav">
+      <h1>
+        <i class="fas fa-plane-departure"></i> Esp32Mpu6050Server
+        <i class="fas fa-plane-arrival"></i>
+      </h1>
+    </div>
+    <div class="content">
+      <div class="cards">
+        <div class="card">
+          <p class="card-title">GYROSCOPE</p>
+          <p>
+            <span class="reading">X: <span id="gyroX"></span> rad</span>
+          </p>
+          <p>
+            <span class="reading">Y: <span id="gyroY"></span> rad</span>
+          </p>
+          <p>
+            <span class="reading">Z: <span id="gyroZ"></span> rad</span>
+          </p>
         </div>
-        <div class="major">
-          <!-- <div class="major__icon"> -->
-          <img src="imgs/Chol.png" alt="" class="major__icon"
-          <!-- </div> -->
-          <h3 class="major__title">
-            President of Daeyang Electronics Industry
-          </h3>
-          <div class="major__description">
-            1977: After graduating from the Department of Communications<br/>
-            &emsp;&emsp;&emsp;at Hanyang University<br/>
-            1981: Retiring as an officer of the Korean Air Force<br/>
-            1982: Participated in the air force air defense project<br/>
-            1986: Civil aviation control system project<br/>
-            1988: Established Daeyang Electronics
-          </div>
+        <div class="card">
+          <p class="card-title">ACCELEROMETER</p>
+          <p>
+            <span class="reading"
+              >X: <span id="accX"></span> ms<sup>2</sup></span
+            >
+          </p>
+          <p>
+            <span class="reading"
+              >Y: <span id="accY"></span> ms<sup>2</sup></span
+            >
+          </p>
+          <p>
+            <span class="reading"
+              >Z: <span id="accZ"></span> ms<sup>2</sup></span
+            >
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Work -->
-    <section id="work" class="section">
-      <div class="section__container">
-        <h1>Our work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-          <button class="category__btn selected" data-filter="*">
-            All<span class="category__count">5</span>
+        <div class="card">
+          <p class="card-title">TEMPERATURE</p>
+          <p>
+            <span class="reading"><span id="temp"></span> &deg;C</span>
+          </p>
+          <p class="card-title">3D ANIMATION</p>
+          <button id="reset" onclick="resetPosition(this)">
+            RESET POSITION
           </button>
-          <button class="category__btn" data-filter="Chol-work">
-            Chol's work<span class="category__count">3</span>
-          </button>
-          <button class="category__btn" data-filter="Ryueae-work">
-            Ryueae's work<span class="category__count">2</span>
-          </button>
-        </div>
-        <div class="work__projects">
-          <a
-            href="https://www.youtube.com/watch?v=LoFUnfA8Jec"
-            class="project"
-            target="blank"
-            data-type="Chol-work"
-          >
-            <img src="imgs/mcrc.png" alt="MCRC" class="project__img" />
-            <div class="project__description">
-              <h3>
-                Air Force Commander<br />
-                MCRC/ARTCC
-              </h3>
-              <span>Aviotronics</span>
-            </div>
-          </a>
-          
-          <a
-            href="https://www.youtube.com/watch?v=Rr8OqB0xRlY"
-            class="project"
-            target="blank"
-            data-type="Chol-work"
-          >
-            <img src="imgs/scada.png" alt="SCADA" class="project__img" />
-            <div class="project__description">
-              <h3>
-                City Gas<br />
-                Remote control/monitoring
-              </h3>
-              <span>YesCo City gas</span>
-            </div>
-          </a>
-          <a
-            href="https://www.youtube.com/watch?v=UPWC1K8xEV4"
-            class="project"
-            target="blank"
-            data-type="Chol-work"
-          >
-            <img src="imgs/eis.png" alt="EIS" class="project__img" />
-            <div class="project__description">
-              <h3>
-                Rail road<br />
-                control/monitoring
-              </h3>
-              <span>Hyukshin</span>
-            </div>
-          </a>
-          <a
-            href=""
-            class="project"
-            target="blank"
-            data-type="Ryueae-work"
-          >
-          <img src="imgs/5-245-image.png" alt="Daeyang" class="project__img" />
-          <div class="project__description">
-            <h3>
-              DaeYang BDG<br />
-              1995 Completed
-            </h3>
-            <span>Daeyang Electronics</span>
-          </div>
-          <a
-            href=""
-            class="project"
-            target="blank"
-            data-type="Ryueae-work"
-          >
-          <img src="imgs/5-129-image.png" alt="Daeyang" class="project__img" />
-          <div class="project__description">
-            <h3>
-              DaeYang BDG<br />
-              2004 Completed
-            </h3>
-            <span>Daeyang Electronics</span>
-          </div>
-        </a>
+          <button id="resetX" onclick="resetPosition(this)">X</button>
+          <button id="resetY" onclick="resetPosition(this)">Y</button>
+          <button id="resetZ" onclick="resetPosition(this)">Z</button>
         </div>
       </div>
-    </section>
-
-    <!-- <section id="skills" class="section"></section> -->
-    <!-- <section id="testimonials" class="section"></section> -->
-
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's contact</h1>
-      <h2 class="contact__email">dyscada@gmail.com</h2>
-      <div class="contact__links">
-        <a href="https://github.com/dyscada/EthWebServer" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank">
-          <i class="fab fa-facebook-square"></i>
-        </a>
+      <div class="cube-content">
+        <div id="3Dcube"></div>
       </div>
-      <p class="contact__rights">2021 Chol and Ryueae - All rights reserved</p>
-    </section>
-
-    <!-- Arrow up -->
-    <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- <script src="script.js"></script> -->
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

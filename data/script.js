@@ -6,7 +6,7 @@
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-let scene, camera, renderer, cube;
+let scene, camera, rendered, cube;
 
 function parentWidth(elem) {
   return elem.parentElement.clientWidth;
@@ -133,15 +133,6 @@ if (!!window.EventSource) {
       document.getElementById("accX").innerHTML = obj.accX;
       document.getElementById("accY").innerHTML = obj.accY;
       document.getElementById("accZ").innerHTML = obj.accZ;
-    },
-    false
-  );
-
-  source.addEventListener(
-    "ntp_reading",
-    function (e) {
-      console.log("ntp_reading", e.data);
-      document.getElementById("yymmdd").innerHTML = e.data;
     },
     false
   );
